@@ -149,16 +149,20 @@
   display: flex;
   flex-flow: row wrap;
   margin: auto;
-  list-style: none;
+  
 }
 
 .table__cell {
+  list-style: none;
+}
+
+.table__cell_theme_bright {
   margin-top: 60px;
   margin-right: calc(100px/3);
   width: 250px;
 }
 
-.table__cell:nth-child(4n) {
+.table__cell_theme_bright:nth-child(4n) {
   margin-right: 0;
 }
 
@@ -234,14 +238,11 @@
 }
 
 .table__cell_theme_dark {
+  margin-top: 80px;
   width: 200px;
   color: white;
   margin-right: calc(100px/4);
   z-index: 3;
-}
-
-.table__cell_theme_dark:nth-child(4n) {
-  margin-right: calc(100px/4);
 }
 
 .table__cell_theme_dark:nth-child(5n) {
