@@ -240,6 +240,10 @@
   z-index: 3;
 }
 
+.table__cell_theme_dark:nth-child(4n) {
+  margin-right: calc(100px/4);
+}
+
 .table__cell_theme_dark:nth-child(5n) {
   margin-right: 0;
 }
