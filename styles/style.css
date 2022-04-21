@@ -1,11 +1,16 @@
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .page {
   min-width: 1100px;
-  /* мы ещё не умеем делать мобильную версию сайта, */
-  /* поэтому выше установлена минимальная ширина страницы */
   max-width: 1600px;
-  /* выше установили ограничение по максимальной ширине */
   margin: 0 auto;
-  /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
@@ -69,8 +74,12 @@
   text-decoration: none;
 }
 
+.header__link:hover {
+  opacity: 0.4;
+  transition: ease-in-out 0.3s;
+}
 
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
+
 .header__square-pic {
   height: 568px;
   width: 568px;
@@ -79,6 +88,8 @@
   top: 64px;
   right: 0;
   background-color: #2f80ed;
+  animation: rotation linear infinite running 20s;
+  overflow: hidden;
 }
 
 .description {
@@ -113,16 +124,129 @@
   font-weight: normal;
 }
 
+.two-columns__paragraph:last-child {
+  margin-bottom: 0;
+}
+
 .two-columns__paragraph-span-accent {
   line-height: 34px;
   font-size: 24px;
   font-weight: bold;
 }
 
+.techniques {
+  width: 80%;
+  padding-top: 100px;
+  margin: auto;
+}
+
+.video {
+  padding-top: 100px;
+  margin: auto;
+}
+
+.video__iframes {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  bottom: -50px;
+  position: relative;
+}
+
+.video__iframes_iframe {
+  margin-right: 20px;
+  width: 515px;
+  min-height: 316px;
+  border: 0;
+  overflow: visible;
+}
+
+.video__iframes_iframe:nth-child(2n) {
+  margin-right: 0;
+}
+
+.oakley {
+  padding-top: 160px;
+  background-color: #f2f2f2;
+}
+
 .digits {
   padding-top: 100px;
   padding-bottom: 100px;
-  position: relative;
+}
+
+.khan {
+  display: flex;
+  padding-top: 105px;
+  background-color: #f2f2f2;
+}
+
+.khan__container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.khan__author {
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: normal;
+  margin: 0 auto;
+}
+
+.khan__title {
+  margin: 0 auto;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.khan__quote {
+  width: 790px;
+  margin: 50px auto 36px 0;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.khan__quote-author{
+  margin: 0 auto;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.khan__quote-author-subline {
+  margin: 10px auto 68px 0;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.khan__book-container {
+  display: flex;
+}
+
+.khan__book-pic {
+  height: 608px;
+  width: 620px;
+  object-fit: none;
+  object-position: 0 0;
+}
+
+.khan__buy-link {
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  margin-left: 48px;
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: normal;
+  color: #2f80ed;
+}
+
+.khan__buy-link:hover {
+  opacity: 0.4;
+  transition: ease-in-out 0.3s;
 }
 
 .section-title {
@@ -143,13 +267,53 @@
   font-weight: normal;
 }
 
+.cards {
+  padding-left: 0;
+  width: 920px;
+  display: flex;
+  flex-flow: row wrap;
+  margin: auto;
+  text-align: center;
+}
+
+.cards__item {
+  list-style: none;
+  margin-right: 100px;
+  width: 240px;
+}
+
+.cards__image {
+  width: 160px;
+  height: 160px;
+  margin: 60px 40px 43px;
+  border-radius: 50%;
+}
+
+.cards__item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.cards__title {
+  margin: 0 auto;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.cards__description {
+  margin: 16px auto 0 0;
+  line-height: 23px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+
 .table {
   padding-left: 0;
   width: 1100px;
   display: flex;
   flex-flow: row wrap;
   margin: auto;
-  
 }
 
 .table__cell {
@@ -219,6 +383,11 @@
   color: #2f80ed;
 }
 
+.feynman__link:hover {
+  opacity: 0.4;
+  transition: ease-in-out 0.3s;
+}
+
 .kaufman {
   overflow: hidden;
   padding-top: 90px;
@@ -226,6 +395,7 @@
   background-color: #1f1f1f;
   position: relative;
 }
+
 
 .section-title_theme_dark {
   color: white;
@@ -256,6 +426,31 @@
   width: 877px;
   height: 877px;
   z-index: 1;
+  animation: rotation linear infinite running 20s;
+}
+
+.resources {
+  padding: 100px 0 217px 0;
+  margin: 0 auto;
+}
+
+.resources__logo-zone {
+  margin: 80px auto 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  width: 1100px;
+}
+
+.resources__link:hover {
+  opacity: 0.4;
+  transition: ease-in-out 0.3s;
+}
+
+.resources__logo {
+  min-width: 270px;
+  height: 38px;
 }
 
 .footer {
@@ -302,6 +497,11 @@
   font-size: 18px;
   font-weight: normal;
   text-decoration: none;
+}
+
+.footer__column-link:hover {
+  opacity: 0.4;
+  transition: ease-in-out 0.3s;
 }
 
 .footer__social-icon {
