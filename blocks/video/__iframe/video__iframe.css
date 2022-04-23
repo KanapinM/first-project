@@ -1,4 +1,4 @@
-.video__iframes_iframe {
+.video__iframe {
   margin-right: 20px;
   width: 515px;
   min-height: 316px;
@@ -6,6 +6,6 @@
   overflow: visible;
 }
 
-.video__iframes_iframe:nth-child(2n) {
+.video__iframe:nth-child(2n) {
   margin-right: 0;
 }
