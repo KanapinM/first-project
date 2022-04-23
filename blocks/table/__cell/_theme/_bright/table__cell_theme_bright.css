@@ -1,0 +1,9 @@
+.table__cell_theme_bright {
+    margin-top: 60px;
+    margin-right: calc(100px/3);
+    width: 250px;
+  }
+
+.table__cell_theme_bright:nth-child(4n) {
+    margin-right: 0;
+  }

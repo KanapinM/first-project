@@ -1,0 +1,11 @@
+.table__cell_theme_dark {
+    margin-top: 80px;
+    width: 200px;
+    color: white;
+    margin-right: calc(100px/4);
+    z-index: 3;
+  }
+
+.table__cell_theme_dark:nth-child(5n) {
+    margin-right: 0;
+  }
