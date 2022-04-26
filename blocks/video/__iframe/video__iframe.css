@@ -3,7 +3,6 @@
   width: 515px;
   min-height: 316px;
   border: 0;
-  overflow: visible;
 }
 
 .video__iframe:nth-child(2n) {
